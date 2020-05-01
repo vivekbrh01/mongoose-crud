@@ -1,0 +1,8 @@
+<h5>Name <%= user.name %></h5>
+<h5>Email <%= user.email %></h5>
+<h3>Sports</h3>
+<h5><% user.sports.forEach(s => { %>
+    <p><%= s%></p>
+    <% }) %></h5>
+<a href="/users/"> HOME</a>
+<a href="/users/<%= user.id%>/delete">DELETE</a>
