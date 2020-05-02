@@ -23,6 +23,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded( { extended: false } ));
 
+
 //Setup View Engines
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -52,7 +53,7 @@ app.use( (err, req, res, next) => {
         res.statusCode = 400;
         return res.json ( {error: err.msg})
     }
-    res.statusCode(500).json( { err });
+    res.status(500).json( { err });
 });
 
 // Listener

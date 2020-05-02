@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h2>Users List</h2> 
+  </head>
+  <body>
+    <h2 class="container">Users List</h2>
     <% users.forEach(user => { %>
-        <h3>Name</h3>
-        <h4><%= user.name %></h4>
-        <h3>Email</h3>
-        <a href="/users/<%= user.email %>"><h4><%= user.email %></h4></a>        
-    <% }) %>
-</body>
+    <section class="container">
+      <h5>Name</h5>
+      <h3><%= user.name %></h4>
+      <h5>Email</h5>
+      <a href="/users/<%= user.email %>"><h3><%= user.email %></h3></a>
+      <% }) %>
+      <div></div>
+    </section>
+      <a href="/users/new">Create User</a>
+    <style>
+      .container {
+        max-width: 440px;
+        margin: 0 auto;
+        display: block;
+        border-bottom: 1px solid turquoise;
+        padding: 12px 0;
+      }
+      h3,
+      h4 {
+        display: inline;
+      }
+      div {
+          
+      }
+    </style>
+  </body>
 </html>
