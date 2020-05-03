@@ -1,12 +1,12 @@
-<h5>Name <%= user.name %></h5>
-<h5>Email <%= user.email %></h5>
+<h2>Name <%= user.name %></h2>
+<h2>Email <%= user.email %></h2>
 <h3>Sports</h3>
-<h5>
+<h2>
   <% user.sports.forEach(s => { %>
   <p><%= s%></p>
   <% }) %>
-</h5>
-<h5>Age <%= user.age %></h5>
+</h2>
+<h3>Age <%= user.age %></h3>
 <a href="/users/"> HOME</a>
 <a href="/users/<%= user.id%>/edit">EDIT</a>
 <a href="/users/<%= user.id%>/delete">DELETE</a>
