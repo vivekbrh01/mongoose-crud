@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <form action="/users/new" method="POST">
-      <input type="text" name="name" placeholder="Name" />
-      <input type="email" name="email" placeholder="Email" />
-      <input type="number" name="age" placeholder="Age" />
-      <input
-        type="text"
-        name="sports"
-        placeholder="Sports ( Separated by comma )"
-      />
-      <input type="submit" value="Create User" />
-    </form>
-  </body>
-</html>
+<%- include("./partials/header") -%>
+<form action="/users/new" method="POST">
+	<input type="text" name="name" placeholder="Name" />
+	<input type="email" name="email" placeholder="Email" />
+	<input type="number" name="age" placeholder="Age" />
+	<input
+		type="text"
+		name="sports"
+		placeholder="Sports ( Separated by comma )"
+	/>
+	<input type="submit" value="Create User" />
+</form>
+<%- include("./partials/footer")-%>
